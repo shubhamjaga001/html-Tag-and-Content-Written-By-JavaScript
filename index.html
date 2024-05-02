@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+#text_box {
+    height: 350px;
+    width: 800px;
+    border: 5px double rgb(255, 3, 221);
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    overflow: auto; /* Add scrollbars if content overflows */
+    text-align: center; /* Center-align the content */
+}
+
+h1 {
+    color: #ff00dd;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px; /* Add space between paragraphs */
+}
+
+/* Custom scrollbar */
+#text_box {
+    scrollbar-width: thin;
+    scrollbar-color: #ff00dd #f7f7f7; /* Scrollbar track and thumb color */
+}
+
+#text_box::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+#text_box::-webkit-scrollbar-thumb {
+    background-color: #ff00dd; /* Color of the scrollbar thumb */
+}
+
+    </style>
+</head>
+<body>
+
+<div id="text_box" style="height: 350px; width: 800px; border: 5px double rgb(255, 3, 221); margin: 0 auto;">
+</div>
+<script>
+let createTag = document.createElement("h1");
+let writeContent = document.createTextNode("This Paragraph Written By JavaScript");
+createTag.appendChild(writeContent);
+let resultBox = document.getElementById("text_box");
+resultBox.appendChild(createTag);
+
+let makeTag = document.createElement("p");
+let writeParagraph = document.createTextNode("A web developer is a digital architect, crafting the virtual landscapes of the internet. They possess a blend of technical prowess and creative finesse, capable of translating concepts into interactive, user-friendly websites. Armed with a diverse toolkit of programming languages, such as HTML, CSS, and JavaScript, they sculpt the visual and functional elements that define online experiences. Beyond coding, they navigate the intricacies of responsive design, ensuring seamless accessibility across devices. Whether building e-commerce platforms, informational sites, or dynamic web applications, their work shapes the digital realm, harmonizing aesthetics with functionality to deliver compelling online destinations. With each line of code, they construct pathways for users to explore, interact, and engage with content. Their expertise extends beyond mere construction; they are problem-solvers, adept at troubleshooting and optimizing performance to enhance user satisfaction. Through continuous learning and adaptation, they stay abreast of evolving technologies and trends, refining their skills to meet the demands of an ever-changing digital landscape. Collaboration is key in their world, as they often work closely with designers, content creators, and clients to bring visions to life. Beyond technical proficiency, they possess a keen eye for design, understanding the nuances of typography, color theory, and layout to create visually captivating interfaces. The web developer's domain is vast, encompassing front-end development, back-end programming, and the integration of databases and APIs to power dynamic functionality.");
+makeTag.appendChild(writeParagraph);
+let showBox = document.getElementById("text_box");
+showBox.appendChild(makeTag);
+</script>
+</body>
+</html>
